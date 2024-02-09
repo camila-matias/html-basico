@@ -16,16 +16,43 @@
 <body>
     <header>
         <h1>HTML - Principais tags</h1>
-        <p>Este documento conterá um estudo sobre as principais tags básicas do HTML, suas estruturas básicas e casos de uso.</p>
+        <p>Este documento conterá um estudo sobre as principais tags básicas do HTML, suas descrições e possíveis casos de uso.</p>
+        <p>É importante lembrar que as tags são elementos que são envoltos de sinais de menor e maior (tag de abertura) e sinais de menor, barra e sinal de maior (tag de fechamento). Há também tags que são denominadas auto-fechantes, de modo que estas não tem tags de abertura e fechamento, mas são uma tag só aberta com um sinal de menor e fechada com barra e sinal de maior.</p>
     </header>
     <hr>
     <section>
-        <h2>Cabeçalho do documento HTML</h2>
-        <!-- doctype, html, head, meta, link, title, style, body, script -->
+        <h2>Cabeçalho e estrutura do documento HTML</h2>
+        <!-- doctype, html, head, meta, link, title, style, body, script, main -->
     </section>
     <section>
         <h2>HTML Semântico e divisores</h2>
-        <!-- header, section, footer, aside, article, main, div, span, br, hr -->
+        <article>
+            <h3>HTML Semântico</h3> 
+            <p>No HTML Semântico, temos 5 principais tags: header, section, article, aside e footer.</p>
+            <dl>
+                <dt>header</dt>
+                <dd>Define uma seção introdutória, onde se tem, normalmente, links de navegação, ícone para a home page da aplicação que se está visualizando ou o título da página.</dd>
+                <dt>section</dt>
+                <dd>Define uma seção dentro do documento cujo conteúdo possui um tema específico, como, por exemplo, um conjunto de notícias.</dd>
+                <dt>article</dt>
+                <dd>É uma tag que, em geral, define um subtópico específico de uma tag section. Muito utilizada em páginas de notícias, em que uma notícia pode estar contida em uma tag article.</dd>
+                <dt>aside</dt>
+                <dd>É uma tag que delimita uma seção lateral, cujo conteúdo se relaciona tangencialmente ao conteúdo principal (de uma section, por exemplo).</dd>
+                <dt>footer</dt>
+                <dd>É a tag que define o rodapé da aplicação, onde se inserem links da página, opções de contato, termos de uso, políticas de privacidade, entre outras informações.</dd>
+            </dl>
+
+            <figure>
+                <img src="/images/nyt1.png" alt="Imagem do site do jornal New York Times com indicativos de quais partes do site representariam as tags header, section, article e aside">
+                <figcaption>Exemplos de possíveis header, section, article e aside no site do The New York Times</figcaption>
+            </figure>
+            <br>
+            <figure>
+                <img src="/images/nyt2.png" alt="Imagem do site do jornal New York Times com indicativos de qual parte do site representaria a tag footer">
+                <figcaption>Exemplo de possível footer no site do The New York Times</figcaption>
+            </figure>
+        </article>
+        <!-- div, span, br, hr -->
     </section>
     <section>
         <h2>Textos e Hyperlinks</h2>
