@@ -92,13 +92,13 @@
             <dt>a</dt>
             <dd>Tag de hyperlink, cria uma conexão para outra parte do documento ou outra página fora do documento HTML em questão. Possui como atributo principal o <i>href</i>, que contém informação de para onde o hyperlink irá levar. Pode possuir outros atributos como <i>target</i> ou <i>download</i>, a depender da função do hyperlink.</dd>
             <dt>em</dt>
-            <dd>Visualmente, aplica um estilo em itálico no texto, mas é uma tag utilizada para indicar uma ênfase no texto.</dd>
+            <dd>Visualmente, aplica um estilo em itálico no texto. Semânticamente, é utilizada para indicar uma ênfase no texto.</dd>
             <dt>strong</dt>
-            <dd>Visualmente, aplica um estilo em negrito no texto, mas é uma tag utilizada para indicar um texto de alta importância no documento.</dd>
+            <dd>Visualmente, aplica um estilo em negrito no texto. Semânticamente, é uma tag utilizada para indicar um texto de alta importância no documento.</dd>
             <dt>ins</dt>
-            <dd>Visualmente, aplica um estilo sublinhado no texto, mas indica um bloco de texto que foi inserido no documento.</dd>
+            <dd>Visualmente, aplica um estilo sublinhado no texto. Semânticamente, indica um bloco de texto que foi inserido no documento.</dd>
             <dt>del</dt>
-            <dd>Visualmente, aplica um estilo riscado no texto, mas indica um bloco de texto que deveria ser desconsiderado.</dd>
+            <dd>Visualmente, aplica um estilo riscado no texto. Semânticamente, indica um bloco de texto que deveria ser desconsiderado.</dd>
         </dl>
         <h3>Tags de estilização de texto</h3>
         <table border="all">
@@ -142,14 +142,53 @@
                     <td><mark>Texto de exemplo</mark></td>
                 </tr>
             </tbody>
-            
         </table>
-        <!--  ins, del -->
+       
     </section>
     <hr>
     <section id="listas">
         <h2>Listas e Tabelas</h2>
-        <!-- dl, dt, dd, ul, ol, li, table, td, tr, th, colgroup, rowgroup -->
+        <h3>Listas descritivas</h3>
+        <p>Utilizadas para listar e descrever itens.</p>
+        <dl>
+            <dt>dl</dt>
+            <dd>Inicializa uma lista de descrições</dd>
+            <dt>dt</dt>
+            <dd>Indica o título do item a ser descrito</dd>
+            <dt>dd</dt>
+            <dd>Descreve o item indicado na tag dt</dd>
+        </dl>
+
+        <h3>Listas ordenadas e não ordenadas</h3>
+        <p>Utilizadas para listagem de itens de forma ordenada ou não.</p>
+        <ul>
+            <li>A tag ul inicializa uma lista não ordenada</li>
+            <li>A tag li indica um item de uma lista, podendo ser utilizada em ambas listas (ordenadas e não ordenadas)</li>
+        </ul>
+        <ol>
+            <li>A tag ol inicializa uma lista ordenada</li>
+            <li>Da mesma forma que na lista não ordenada, a tag li indica um item de uma lista</li>
+        </ol>
+
+        <h3>Tabelas</h3>
+        <p>Utilizadas para visualização de informações em formato tabular.</p>
+        <dl>
+            <dt>table</dt>
+            <dd>Tag que inicializa uma tabela</dd>
+            <dt>thead</dt>
+            <dd>Tag que indica o <i>header</i> da tabela, ou seja, sua primeira linha</dd>
+            <dt>tbody</dt>
+            <dd>Tag que engloba o conteúdo da tabela</dd>
+            <dt>tfooter</dt>
+            <dd>Tag que indica o <i>footer</i> da tabela, ou seja, sua última linha</dd>
+            <dt>tr</dt>
+            <dd>Inicializa uma linha da tabela.</dd>
+            <dt>th</dt>
+            <dd>Indica uma célula de importância dentro da linha e tabela</dd>
+            <dt>td</dt>
+            <dd>Indica uma célula genérica dentro da linha e tabela</dd>
+        </dl>
+
     </section>
     <hr>
     <section id="midias">
