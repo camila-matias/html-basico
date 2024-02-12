@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Principais Tags</title>
+</head>
+<style>
+    dt{ 
+        font-weight: bold;
+    }
+</style>
+<body>
+    <header>
+        <h1>HTML - Principais tags</h1>
+        <p>Este documento conterá um estudo sobre as principais tags básicas do HTML, suas descrições e possíveis casos de uso.</p>
+        <p>É importante lembrar que as tags são elementos que são envoltos de sinais de menor e maior (tag de abertura) e sinais de menor, barra e sinal de maior (tag de fechamento). Há também tags que são denominadas auto-fechantes, de modo que estas não tem tags de abertura e fechamento, mas são uma tag só aberta com um sinal de menor e fechada com barra e sinal de maior.</p>
+        <img width="25%" src="images/taghtml.png" alt="Estrutura de uma tag HTML comum, com tag de abertura, conteúdo e tag de fechamento">
+        <hr>
+        <nav>
+            <a href="#cabecalho">1. Cabeçalho e estrutura do documento HTML</a>
+            <a href="#semantico">2. HTML Semântico e divisores</a>
+            <a href="#textos">3. Textos e Hyperlinks</a>
+            <a href="#listas">4. Listas e Tabelas</a>
+            <a href="#midias">5. Mídias</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section id="cabecalho">
+            <h2>1. Cabeçalho e estrutura do documento HTML</h2>
+            <dl>
+                <dt>doctype</dt>
+                <dd>É uma tag introdutória, encontrada em todos os documentos HTML, cujo propósito é evitar que os navegadores renderizem a página que uma forma não padrão, os chamados "quirks mode". Dessa forma, com o doctype, o documento é renderizado conforme as especificações do HTML e CSS.</dd>
+                <dt>html</dt>
+                <dd>É a tag que engloba todo o conteúdo do documento HTML, seja este conteúdo visível ao usuário ou não. Tem como atributo importante o <i>lang</i>, que indica o idioma no qual o documento HTML em questão está escrito.</dd>
+                <dt>head</dt>
+                <dd>É a tag que engloba os metadados (informações gerais) do documento HTML.</dd>
+                <dt>meta</dt>
+                <dd>É a tag que define as informações de metadados que não possuem tags específicas para seu propósito, sejam elas a codificação de caracteres utilizada (<i>charset</i>), tamanho inicial do documento (<i>viewport</i>), entre outros.</dd>
+                <dt>link</dt>
+                <dd>É a tag que indica uma relação entre o documento e recursos externos. Amplamente utilizado para relacionar folhas de estilo (CSS externo) e fontes não padrão com o documento.</dd>
+                <dt>title</dt>
+                <dd>É a tag que indica qual o título que será exibido na aba do navegador.</dd>
+                <dt>style</dt>
+                <dd>É uma tag que engloba regras de estilização para o documento (CSS interno), podendo ser utilizada ou não.</dd>
+                <dt>body</dt>
+                <dd>É a tag que representa o conteúdo do documento HTML que será visível para o usuário. Só é possível ter uma tag <code>body</code> por documento.</dd>
+                <dt>main</dt>
+                <dd>É a tag que define o conteúdo principal do documento HTML. Não é recomendado que se tenha mais de uma tag <code>main</code> no documento e, esta tag não pode ser tag filha de tags do HTML semântico <code>article</code>, <code>aside</code>, <code>footer</code>, <code>header</code> ou <code>nav</code>.</dd>
+                <dt>script</dt>
+                <dd>É a tag utilizada para relacionar scripts executáveis ao documento ou incluí-los no próprio documento. Esta tag pode ser posicionada antes ou depois do body, a depender se o script necessita, na sua execução, que o documento HTML esteja totalmente carregado ou não.</dd>
+            </dl>
+        </section>
+        <section id="semantico">
+            <h2>2. HTML Semântico e divisores</h2>
+            <article>
+                <h3>HTML Semântico</h3> 
+                <p>No HTML Semântico, temos 5 principais tags: header, section, article, aside e footer.</p>
+                <dl>
+                    <dt>header</dt>
+                    <dd>Define uma seção introdutória, onde se tem, normalmente, links de navegação, ícone para a home page da aplicação que se está visualizando ou o título da página.</dd>
+                    <dt>nav</dt>
+                    <dd>Define uma seção de navegação da página, em geral associada ao header.</dd>
+                    <dt>section</dt>
+                    <dd>Define uma seção dentro do documento cujo conteúdo possui um tema específico, como, por exemplo, um conjunto de notícias.</dd>
+                    <dt>article</dt>
+                    <dd>É uma tag que, em geral, define um subtópico específico de uma tag section. Muito utilizada em páginas de notícias, em que uma notícia pode estar contida em uma tag article.</dd>
+                    <dt>aside</dt>
+                    <dd>É uma tag que delimita uma seção lateral, cujo conteúdo se relaciona tangencialmente ao conteúdo principal (de uma section, por exemplo).</dd>
+                    <dt>footer</dt>
+                    <dd>É a tag que define o rodapé da aplicação, onde se inserem links da página, opções de contato, termos de uso, políticas de privacidade, entre outras informações.</dd>
+                </dl>
+    
+                <figure>
+                    <img src="/images/nyt1.png" alt="Imagem do site do jornal New York Times com indicativos de quais partes do site representariam as tags header, nav, section, article e aside">
+                    <figcaption>Exemplos de possíveis header, nav, section, article e aside no site do The New York Times</figcaption>
+                </figure>
+                <br>
+                <figure>
+                    <img src="/images/nyt2.png" alt="Imagem do site do jornal New York Times com indicativos de qual parte do site representaria a tag footer">
+                    <figcaption>Exemplo de possível footer no site do The New York Times</figcaption>
+                </figure>
+            </article>
+            
+            <article>
+                <h3>Divisores</h3>
+                <p>Há também algumas tags de divisões de documento comumente utilizadas como div, span, hr e br.</p>
+                <dl>
+                    <dt>div</dt>
+                    <dd>É um divisor genérico e não semântico que define um bloco de código.</dd>
+                    <dt>span</dt>
+                    <dd>É uma tag utilizada quando se gostaria de realizar uma separação inline de elementos. Geralmente utilizada para separação de itens para estilização diferenciada.</dd>
+                    <dt>hr</dt>
+                    <dd>Representa uma linha horizontal desenhada no documento, utilizada para divisão de seções.</dd>
+                    <dt>br</dt>
+                    <dd>Representa uma quebra de linha. Geralmente utilizada para criar uma separação em seções ou parágrafos de um documento HTML, sem a utilização de estilização CSS.</dd>
+                </dl>
+            </article>
+        </section>
+        <hr>
+        <section id="textos">
+            <h2>3. Textos e Hyperlinks</h2>
+            <dl>
+                <dt>h1, h2, h3, h4, h5 e h6</dt>
+                <dd>Tags de título e subtítulos. Utilizados em hierarquias, sendo h1 o maior título entre todos e h6, o menor. É recomendado que haja apenas uma tag h1 no documento HTML, contendo o título principal da página, e que demais subtítulos sejam tags h2 ou menores.</dd>
+                <dt>p</dt>
+                <dd>Tag de parágrafo, delimita um bloco de texto.</dd>
+                <dt>a</dt>
+                <dd>Tag de hyperlink, cria uma conexão para outra parte do documento ou outra página fora do documento HTML em questão. Possui como atributo principal o <i>href</i>, que contém informação de para onde o hyperlink irá levar. Pode possuir outros atributos como <i>target</i> ou <i>download</i>, a depender da função do hyperlink.</dd>
+                <dt>em</dt>
+                <dd>Visualmente, aplica um estilo em itálico no texto. Semânticamente, é utilizada para indicar uma ênfase no texto.</dd>
+                <dt>strong</dt>
+                <dd>Visualmente, aplica um estilo em negrito no texto. Semânticamente, é uma tag utilizada para indicar um texto de alta importância no documento.</dd>
+                <dt>ins</dt>
+                <dd>Visualmente, aplica um estilo sublinhado no texto. Semânticamente, indica um bloco de texto que foi inserido no documento.</dd>
+                <dt>del</dt>
+                <dd>Visualmente, aplica um estilo riscado no texto. Semânticamente, indica um bloco de texto que deveria ser desconsiderado.</dd>
+            </dl>
+            <h3>Tags de estilização de texto</h3>
+            <table border="all">
+                <!-- Sei que o border da tabela está deprecated no HTML, utilizando aqui só mesmo pra fins de utilizar o mínimo de CSS possível -->
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Descrição</th>
+                        <th>Demonstração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>b</th>
+                        <td>Deixa o texto em negrito</td>
+                        <td><b>Texto de exemplo</b></td>
+                    </tr>
+                    <tr>
+                        <th>i</th>
+                        <td>Deixa o texto em itálico</td>
+                        <td><i>Texto de exemplo</i></td>
+                    </tr>
+                    <tr>
+                        <th>sub</th>
+                        <td>Deixa o texto subscrito</td>
+                        <td><sub>Texto</sub>de exemplo</td>
+                    </tr>
+                    <tr>
+                        <th>sup</th>
+                        <td>Deixa o texto sobrescrito</td>
+                        <td><sup>Texto</sup>de exemplo</td>
+                    </tr>
+                    <tr>
+                        <th>small</th>
+                        <td>Deixa o texto menor em relação à fonte padrão, sem a utilização de estilização CSS.</td>
+                        <td><small>Texto</small> de exemplo</td>
+                    </tr>
+                    <tr>
+                        <th>mark</th>
+                        <td>Deixa o texto marcado com fundo amarelo, tal qual um marca texto</td>
+                        <td><mark>Texto de exemplo</mark></td>
+                    </tr>
+                </tbody>
+            </table>
+           
+        </section>
+        <hr>
+        <section id="listas">
+            <h2>4. Listas e Tabelas</h2>
+            <h3>Listas descritivas</h3>
+            <p>Utilizadas para listar e descrever itens.</p>
+            <dl>
+                <dt>dl</dt>
+                <dd>Inicializa uma lista de descrições</dd>
+                <dt>dt</dt>
+                <dd>Indica o título do item a ser descrito</dd>
+                <dt>dd</dt>
+                <dd>Descreve o item indicado na tag dt</dd>
+            </dl>
+    
+            <h3>Listas ordenadas e não ordenadas</h3>
+            <p>Utilizadas para listagem de itens de forma ordenada ou não.</p>
+            <ul>
+                <li>A tag ul inicializa uma lista não ordenada</li>
+                <li>A tag li indica um item de uma lista, podendo ser utilizada em ambas listas (ordenadas e não ordenadas)</li>
+            </ul>
+            <ol>
+                <li>A tag ol inicializa uma lista ordenada</li>
+                <li>Da mesma forma que na lista não ordenada, a tag li indica um item de uma lista</li>
+            </ol>
+    
+            <h3>Tabelas</h3>
+            <p>Utilizadas para visualização de informações em formato tabular.</p>
+            <dl>
+                <dt>table</dt>
+                <dd>Tag que inicializa uma tabela</dd>
+                <dt>thead</dt>
+                <dd>Tag que indica o <i>header</i> da tabela, ou seja, sua primeira linha</dd>
+                <dt>tbody</dt>
+                <dd>Tag que engloba o conteúdo da tabela</dd>
+                <dt>tfooter</dt>
+                <dd>Tag que indica o <i>footer</i> da tabela, ou seja, sua última linha</dd>
+                <dt>tr</dt>
+                <dd>Inicializa uma linha da tabela.</dd>
+                <dt>th</dt>
+                <dd>Indica uma célula de importância dentro da linha e tabela</dd>
+                <dt>td</dt>
+                <dd>Indica uma célula genérica dentro da linha e tabela</dd>
+            </dl>
+    
+        </section>
+        <hr>
+        <section id="midias">
+            <h2>5. Mídias</h2>
+            <dl>
+                <dt>img</dt>
+                <dd>Tag utilizada para inserção de imagens no documento HTML. Possui 2 atributos importantes: <i>src</i> onde é indicada a fonte do arquivo de imagem e <i>alt</i> que representa um texto alternativo para a imagem, tanto para melhorar a acessibilidade, quanto para caso a imagem não carregue corretamente.</dd>
+                <dt>figure</dt>
+                <dd>Tag utilizada para inserção de imagens, trechos de código, citações, entre outros tipos de visualização. Normalmente, possui a tag <code>figcaption</code> como filha, cujo objetivo é inserir uma legenda para a figura representada.</dd>
+                <dt>svg</dt>
+                <dd>SVG (do inglês <i>Scalable Vector Graphics</i>) é uma linguagem de marcação de gráficos. No HTML, a tag svg pode tanto representar imagens que são facilmente alteradas em dimensão ou cor, quanto pode, juntamente com CSS, criar estilizações para a página HTML ou, até mesmo, animações.</dd>
+                <dt>picture</dt>
+                <dd>Uma tag comumente utilizada quando se quer otimizar a qualidade de uma imagem a depender do dispositivo no qual o usuário esteja a vendo. Possui como tags filhas a tag <code>source</code> com os atributos <i>srcset</i> e <i>media</i> para indicar a fonte das imagens para diferentes tamanhos de dispositivo e uma tag <code>img</code> como a imagem default caso todos as condições de <i>media</i> sejam falsas.</dd>
+                <dt>audio</dt>
+                <dd>Tag utilizada para inserção de audios no documento HTML. Assim como a tag <code>img</code>, possui o atributo <i>src</i> para que seja indicada a origem do audio a ser inserido. Esta tag possui também vários outros atributos que definem a forma como o audio é reproduzido (automaticamente ou não), se será em loop, se terão controles de áudio visíveis, entre outros.</dd>
+                <dt>video</dt>
+                <dd>Tag utilizada para a inserção de vídeos no documento HTML. Assim como as tags <code>img</code> e <code>audio</code>, possui o atributo <i>src</i> para que seja indicada a origem do vídeo a ser inserido. Esta tag também possui vários outros atributos que definem uma imagem prévia, se os controles estarão visíveis ou não, se o vídeo reproduzirá em loop, entre outros.</dd>
+            </dl>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        Observação: Neste documento, não abordamos formulários HTML. Para informações sobre as tags utilizadas em formulários, acesse <a href="/tagsform.html">este link</a>.
+    </footer>
+</body>
+</html>
