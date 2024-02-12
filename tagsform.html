@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários HTML - Principais tags</title>
 </head>
+<style>
+    dt{ 
+        font-weight: bold;
+    }
+</style>
 <body>
     <header>
         <h1>Formulários HTML - Principais tags</h1>
@@ -16,23 +21,70 @@
             <h2>Tags em formulários HTML</h2>
             <dl>
                 <dt>form</dt>
-                <dd></dd>
+                <dd>É a tag que inicializa e finaliza um formulário interativo, englobando todo seu conteúdo. Possui os atributos específicos: 
+                    <ul>
+                        <li><i>action</i>, que define uma url, relativa ou absoluta, para onde os dados do formulário irão após submissão deste.</li>
+                        <li><i>method</i>, que define o método HTTP utilizado quando o formulário é submetido (get, post, entre outros).</li>
+                        <li><i>target</i>, que define se o url indicada na action será aberta na mesma aba do navegador, em uma aba ou janela diferentes.</li>
+                        <li><i>autocomplete</i>, que define se o navegador poderá utilizar o recurso de auto-completar respostas ou não.</li>
+                        <li><i>novalidate</i>, que indica que o navegador não irá validar o formulário em sua submissão (validação do lado do cliente).</li>
+                    </ul>
+                    </dd>
+                <dt>fieldset</dt>
+                <dd>Tag que agrupa campos de um mesmo tema. Em geral, agrupa campos do tipo <code>radio</code> ou <code>checkbox</code> que possuem um tema em comum.</dd>
+                <dt>legend</dt>
+                <dd>Tag filha da tag <code>fieldset</code>, é utilizada como legenda para o agrupamento de campos, ou seja, sobre o que é a tag fieldset a qual está associada.</dd>
                 <dt>label</dt>
-                <dd></dd>
+                <dd>Tag utilizada como legenda para as tags do tipo <code>input</code>. Possuem o atributo específico <i>for</i>, em que é indicado o nome do input ao qual a label está associado.</dd>
                 <dt>input</dt>
                 <dd>
-                    <p></p>
+                    É a tag de campo de formulário. Possui vários tipos, cada um com seus atributos gerais e específicos. Os tipos mais comuns são:
                     <ul>
-                        <li></li>
+                        <li><i>text</i>, que é um campo de texto, podendo ter atributos como <code>minlength</code> e <code>maxlength</code>, que indicam a quantidade mínima e máxima de caracteres permitidos no texto.</li>
+                        <li><i>date</i>, que é um campo de data.</li>
+                        <li><i>email</i>, que é um campo de e-mail. Atualmente este campo é automaticamente validado pelo navegador na submissão do formulário - exceto quando o novalidate é utilizado - para validar se os valores preenchidos possuem o padrão correto para e-mails.</li>
+                        <li><i>radio</i>, define uma caixa de seleção única, ou seja, caso mais de um input radio seja utilizado para seleções dentro de um mesmo tema, apenas um input poderá ser marcado. Possui o atributo <i>value</i> para que seja indicado o valor que cada opção indica dentro do formulário.</li>
+                        <li><i>tel</i>, que indica que os valores preenchidos no campo serão números de telefone.</li>
+                        <li><i>url</i>, que é um campo de url e, assim como o campo de e-mail, é automaticamente validado pelo navegador com o padrão de urls.</li>
+                        <li><i>file</i>, que é um campo de inserção de documentos no preenchimento do formulário.</li>
+                        <li><i>textarea</i>, que é um campo de caixa de texto, porém com a possibilidade de aumentar o tamanho de linhas e colunas com os atributos específicos <code>rows</code> e <code>cols</code>.</li>
+                        <li><i>password</i>, que é um campo para senhas, em que a visualização do preenchimento é restrita e não se pode verificar visualmente o que foi preenchido.</li>
+                        <li><i>checkbox</i>, que é um campo de caixa de seleção múltipla, em que múltiplos checkboxes de um mesmo tema podem ser marcados.</li>
+                        <li><i>number</i>, que é um campo de números.</li>
+                        <li><i>range</i>, que é um campo de range, podendo ter valores máximos e mínimos definidos com os atributos específicos <code>max</code> e <code>min</code>.</li>
+                        <li><i>image</i>, que é um tipo em que a imagem utilizada como fonte pode substituir o botão de submissão do formulário.</li>
+                        <li><i>color</i>, que abre uma caixa de seleção de cores.</li>
+                        <li><i>submit</i>, que é um tipo de input que se comporta como um botão, podendo ser o botão de submissão do formulário.</li>
+                        <li><i>reset</i>, um tipo que, assim como o submit, se comporta como um botão. Clicando em um input do tipo reset, o formulário é resetado em todos os seus campos.</li>
                     </ul>
                 </dd>
+                <dt>select</dt>
+                <dd>Esta tag abre uma lista para seleção de dados, sendo de seleção única.</dd>
+                <dt>option</dt>
+                <dd>Tag filha da tag <code>select</code>, é o campo de opção da lista de seleção criada pela tag mãe. Possui o atributo <i>value</i> para que seja indicado o valor que aquela opção indica dentro da lista e do formulário.</dd>
                 <dt>button</dt>
-                <dd></dd>
+                <dd>Esta tag cria um botão sem comportamento específico default, mas que pode ser utilizado para submissão de formulários caso seja do tipo <i>submit</i>.</dd>
+            </dl>
+            <h3>Atributos gerais</h3>
+            <p></p>
+            <dl>
+                <dt>name</dt>
+                <dd>É o identificador do campo dentro do formulário e na sua submissão. É por onde um possível backend identifica o valor preenchido dentro do campo.</dd>
+                <dt>id</dt>
+                <dd>É o identificador do campo dentro do código e utilizado em possíveis manipulações do formulário utilizando Javascript.</dd>
+                <dt>placeholder</dt>
+                <dd>É um texto dentro do campo que é utilizado como referência do que deve ser preenchido no campo em específico. Assim que o usuário começa a preencher o campo, o placeholder é apagado.</dd>
             </dl>
         </section>
         <section>
             <h2>Informações sobre validação</h2>
-
+            <h3>Validação do lado do cliente</h3>
+            <p>A validação do lado do cliente é realizada nos formulários por meio da tipagem dos inputs (como url ou e-mail) em que o navegador confronta o valor preenchido com um padrão especificado e por meio do atributo <i>required</i>, em que o navegador irá avaliar se os campos marcados com esse atributo estão preenchidos. Caso alguma das validações resulte em não correspondência ou não preenchimento, o navegador impedirá o formulário de ser submetido.</p>
+            <h4>O atributo <i>pattern</i></h4>
+            <p>Input dos tipos <code>text</code>, <code>tel</code>, <code>email</code>, <code>url</code>, <code>password</code> e <code>search</code> podem ser contemplados com o atributo <i>pattern</i>, que define um padrão específico com o qual os valores de preenchimento serão validados.</p>
+            <p>O padrão definido deverá ser uma expressão regular Javascript válida (comumente chamadas de <i>RegEx</i>) e, por questões de acessibilidade, é recomendado que, acompanhado do atributo pattern, venha o atributo <i>title</i>, que dá mais informações sobre o padrão que está sendo utilizado.</p>
+            <h3>Validações com Javascript</h3>
+            <p>Outros tipos de validação, como igualdade entre campos de "senha" e "confirmação de senha", são realizados por meio de Javascript e não serão abordados neste documento.</p>
         </section>
     </main>
     <hr>
